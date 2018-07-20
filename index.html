@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>js assignment 7.2</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+     <script>
+        function isPrime(num) {
+        var result = true;
+        if (num >= 2) {
+            if(num == 2 || num == 3){
+               result = true;
+            }
+            else if (num % 2 == 0) {
+                result = false;
+            }
+            else {
+                for (i = 3; i <= Math.floor(Math.sqrt(num)); i += 2) {
+                    if (num % i == 0) {
+                        result = false;
+                        break;
+                    }
+                }
+             }
+           }
+           else {
+               result = false;
+           }
+              return result;
+          }
+         
+         
+         console.log(isPrime(98)); // prints false
+         console.log(isPrime(97)); // prints true
+       
+    </script>
+   </body>
+</html>
